@@ -13,3 +13,5 @@ Implementing Pagination using React
 ### Features
 - Pagination
 - User can choose no. of products per page (to be added)
+- Don't show all the page numbers, show first and last 2-3 page numbers, in-between show dots like thing
+    - Prev  1 2 3  ...  9 10  Next

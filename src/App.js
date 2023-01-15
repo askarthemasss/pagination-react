@@ -41,16 +41,15 @@ function App() {
       </div>
       <div className='pagination'>
         {
-          
+          products.length > 0  && <button onClick={page !== 1 ? () => setPage(page - 1) : null}>Prev</button>
         }
-        <button onClick={page !== 1 ? () => setPage(page - 1) : null}>Prev</button>
         {
           /* 
             Total products = 100, products per page = 9
             No. of pages =  Math.ceil(Total_products/products_per_page) = 100/9 = 12
             Create an empty array of 12 elements to generate page numbers
           */
-          [...Array(Math.ceil(100/9))].map((_,i) => {
+            products.length > 0  && [...Array(Math.ceil(100/9))].map((_,i) => {
             return (
               <button
                 key={i}
@@ -62,7 +61,7 @@ function App() {
             )
           })
         }
-        <button onClick={page !== Math.ceil(100/9) ? () => setPage(page + 1) : null}>Next</button>
+        {products.length > 0  &&  <button onClick={page !== Math.ceil(100/9) ? () => setPage(page + 1) : null}>Next</button>}
       </div>
     </>
   );
