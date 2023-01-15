@@ -5,12 +5,46 @@
 }
 
 .products{
-  width: 100%;
-  display: flex;
+  margin: 2rem;
+  display: grid;
   gap: 2rem;
-  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr 1fr;
 
 }
 
 .product__single{
+  height: 20rem;
+  width: 100%;
+  border: 1px solid red;
+  overflow: hidden;
+  /* object-fit: cover; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+img{
+  height: 90%;
+  /* width: 90%; */
+}
+
+.pagination{
+  margin: 2rem;
+  text-align: center;
+}
+
+button{
+  margin-left: 1rem;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  border: none;
+}
+
+.current__page{
+  background-color: burlywood;
 }
